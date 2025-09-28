@@ -2,11 +2,23 @@ site_name: "Your Cyber Notes"
 theme:
   name: material
   features:
-    - navigation.instant
     - navigation.tabs
+    - navigation.top
   palette:
-    primary: indigo
-    accent: indigo
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+extra_css:
+  - assets/extra.css
 
 nav:
   - Home: index.md
@@ -16,16 +28,6 @@ nav:
       - Cheatsheet: red-team/cheatsheet.md
       - Tools:
           - Nmap: tools/nmap.md
-          # add more red-team tools here later
   - Blue Team:
       - Overview: blue-team/index.md
       - Detection Playbooks: blue-team/detection-playbooks.md
-      # add more blue-team pages here later
-
-plugins:
-  - search
-
-markdown_extensions:
-  - admonition
-  - codehilite
-  - attr_list
