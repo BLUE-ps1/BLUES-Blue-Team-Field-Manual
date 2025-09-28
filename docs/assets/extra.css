@@ -68,4 +68,79 @@
 .kc-btn.exfil       { border-left: 6px solid #c2185b; }  /* magenta */
 .kc-btn.actions     { border-left: 6px solid #37474f; }  /* slate */
 
+/* ---------- Kill-chain full-width bars ---------- */
+
+.killchain-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 1.25rem 0 2rem;
+}
+
+/* Each bar (link) */
+.kc-bar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  text-decoration: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--md-default-bg-color);
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: transform .08s ease, box-shadow .12s ease, background .12s ease;
+  padding: 0;
+  min-height: 84px;
+}
+
+/* left coloured stripe (fixed width) */
+.kc-bar-left {
+  width: 12px;
+  height: 100%;
+  flex: 0 0 12px;
+}
+
+/* text block inside the bar */
+.kc-bar-content {
+  padding: 16px 20px;
+  color: inherit;
+  display: block;
+}
+
+/* title + description style */
+.kc-bar-content h3 { margin: 0 0 6px 0; font-weight: 600; font-size: 1.15rem; }
+.kc-bar-content p  { margin: 0; color: rgba(0,0,0,0.66); }
+
+/* hover / focus */
+.kc-bar:hover,
+.kc-bar:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+}
+
+/* make keyboard-focus visible */
+.kc-bar:focus { outline: 3px solid rgba(43,97,186,0.14); outline-offset: 3px; }
+
+/* ---------- Color accents per stage (left stripe) ---------- */
+.kc-recon    .kc-bar-left { background: #2B61BA; } /* blue */
+.kc-weaponize .kc-bar-left { background: #c62828; } /* red */
+.kc-delivery .kc-bar-left { background: #8e24aa; } /* purple */
+.kc-exploitation .kc-bar-left { background: #d84315; } /* deep orange */
+.kc-install  .kc-bar-left { background: #6d4c41; } /* brown */
+.kc-c2       .kc-bar-left { background: #00897b; } /* teal */
+.kc-persistence .kc-bar-left { background: #ffb300; } /* amber */
+.kc-privesc  .kc-bar-left { background: #ef6c00; } /* orange */
+.kc-lateral  .kc-bar-left { background: #7b1fa2; } /* purple/dark */
+.kc-exfil    .kc-bar-left { background: #c2185b; } /* magenta */
+.kc-actions  .kc-bar-left { background: #37474f; } /* slate */
+
+/* Responsive: make bars stack nicely on mobile and full width */
+@media (max-width: 700px) {
+  .kc-bar { min-height: 72px; }
+  .kc-bar-content h3 { font-size: 1.02rem; }
+}
+
+/* If you want the text color inside the bar to be white on very dark headers,
+   override per your theme later. For now, keep default readable colours. */
+
 
