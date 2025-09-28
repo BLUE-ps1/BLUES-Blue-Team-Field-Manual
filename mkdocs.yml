@@ -1,25 +1,31 @@
 site_name: "Your Cyber Notes"
-site_description: "Red/Blue notes, tools, playbooks and TryHackMe/HTB writeups"
-site_author: "Your Name"
-repo_url: "https://github.com/yourusername/mkdocs-starter"
 theme:
-  name: 'material'
-  language: 'en'
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tabs
+  palette:
+    primary: indigo
+    accent: indigo
+
 nav:
   - Home: index.md
   - Red Team:
-    - Overview: red-team/readme.md
-    - Example Room: red-team/rooms/thm-room-example.md
-    - Cheatsheet: red-team/cheatsheet.md
+      - Overview: red-team/index.md
+      - Rooms: red-team/rooms/
+      - Cheatsheet: red-team/cheatsheet.md
+      - Tools:
+          - Nmap: tools/nmap.md
+          # add more red-team tools here later
   - Blue Team:
-    - Overview: blue-team/readme.md
-    - Detection Playbooks: blue-team/detection-playbooks.md
-  - Tools:
-    - nmap: tools/nmap.md
-  - Writeups:
-    - Example: writeups/htb-writeup-example.md
+      - Overview: blue-team/index.md
+      - Detection Playbooks: blue-team/detection-playbooks.md
+      # add more blue-team pages here later
+
 plugins:
   - search
+
 markdown_extensions:
   - admonition
   - codehilite
+  - attr_list
