@@ -30,7 +30,7 @@
 /* Brand colors (light mode) */
 :root {
   /* primary = top bars, active links */
-  --md-primary-fg-color: #3FACD4;           /* your hex */
+  --md-primary-fg-color: #2B61BA;           /* your hex */
   --md-primary-fg-color--light: #74D0E6;    /* optional */
   --md-primary-fg-color--dark:  #2A8AA8;    /* optional */
 
@@ -40,7 +40,7 @@
 
 /* Brand colors (dark mode) */
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #3FACD4;           /* same or darker shade */
+  --md-primary-fg-color: #2B61BA;           /* same or darker shade */
   --md-accent-fg-color: #ef5350;
 }
 
