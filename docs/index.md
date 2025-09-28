@@ -1,6 +1,19 @@
-# Welcome to Your Cyber Notes
+---
+hide:
+  - navigation   # hides the left sidebar on this page only
+  - toc          # hides the on-page table of contents
+---
 
-This is a starter site for your red/blue team notes, playbooks, and writeups.
-Edit the files in the `docs/` folder, preview locally with `mkdocs serve`, and push to GitHub to publish.
+# Welcome
 
-> **Safety:** Do **not** publish any credentials, PII, or live client data. Sanitize screenshots and IPs before publishing.
+<div class="home-tiles">
+  <a class="tile blue" href="blue-team/">
+    <h2>Blue Team</h2>
+    <p>Detection playbooks, SIEM/Sysmon notes, IR runbooks.</p>
+  </a>
+
+  <a class="tile red" href="red-team/">
+    <h2>Red Team</h2>
+    <p>Writeups, enumeration, exploitation, tools & cheatsheets.</p>
+  </a>
+</div>
