@@ -29,12 +29,12 @@
 
 /* Top banner background */
 .md-header {
-  background-color: #1a1a2e !important;   /* replace with your hex */
+  background-color: #3FACD4 !important;   /* replace with your hex */
 }
 
 /* Optional: change the text/icons in the header */
 .md-header__title, 
 .md-header__button,
 .md-search__input {
-  color: #3FACD4 !important;
+  color: #fffff !important;
 }
