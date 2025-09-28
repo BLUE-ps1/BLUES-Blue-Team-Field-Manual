@@ -55,4 +55,17 @@
   color: #ffffff !important;
 }
 
+/* Stage accents (keep consistent with your palette) */
+.kc-btn.recon       { border-left: 6px solid #2B61BA; }  /* blue */
+.kc-btn.weaponize   { border-left: 6px solid #c62828; }  /* red */
+.kc-btn.delivery    { border-left: 6px solid #8e24aa; }  /* purple */
+.kc-btn.exploitation{ border-left: 6px solid #d84315; }  /* deep orange */
+.kc-btn.install     { border-left: 6px solid #6d4c41; }  /* brown */
+.kc-btn.c2          { border-left: 6px solid #00897b; }  /* teal */
+.kc-btn.persistence { border-left: 6px solid #ffb300; }  /* amber */
+.kc-btn.priv-esc    { border-left: 6px solid #ef6c00; }  /* orange */
+.kc-btn.lateral     { border-left: 6px solid #7b1fa2; }  /* purple/dark */
+.kc-btn.exfil       { border-left: 6px solid #c2185b; }  /* magenta */
+.kc-btn.actions     { border-left: 6px solid #37474f; }  /* slate */
+
 
