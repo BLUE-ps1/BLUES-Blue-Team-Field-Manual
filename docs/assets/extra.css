@@ -143,4 +143,91 @@
 /* If you want the text color inside the bar to be white on very dark headers,
    override per your theme later. For now, keep default readable colours. */
 
+/* ---------- Make KC bars visually distinct ---------- */
+
+/* overall wrapper: keep a max width so bars align nicely inside the content column */
+.killchain-list {
+  max-width: 980px;     /* change to taste */
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* each bar - visible background + border + subtle shadow */
+.kc-bar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  text-decoration: none;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;                       /* main card bg - keep white or change */
+  border: 1px solid rgba(34, 34, 34, 0.06);  /* stronger visible border */
+  box-shadow: 0 6px 18px rgba(20, 20, 20, 0.04);
+  transition: transform .08s ease, box-shadow .14s ease, border-color .12s ease;
+  padding: 0;
+  min-height: 84px;
+  width: 100%;
+}
+
+/* make left stripe more visible by adding a faint gradient behind it */
+.kc-bar-left {
+  width: 12px;
+  height: 100%;
+  flex: 0 0 12px;
+  box-shadow: inset 0 0 12px rgba(0,0,0,0.04);
+}
+
+/* content area: stronger contrast and spacing */
+.kc-bar-content {
+  padding: 18px 22px;
+  color: var(--md-default-fg-color); /* uses theme text color */
+  display: block;
+}
+
+/* bigger title and darker description for readability */
+.kc-bar-content h3 {
+  margin: 0 0 6px 0;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: rgba(10, 10, 10, 0.88);
+}
+.kc-bar-content p {
+  margin: 0;
+  color: rgba(25, 25, 25, 0.62);
+  font-size: .96rem;
+}
+
+/* hover / focus: stronger lift and border highlight */
+.kc-bar:hover,
+.kc-bar:focus {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 50px rgba(15,15,15,0.08);
+  border-color: rgba(43,97,186,0.12);
+}
+
+/* active/keyboard focus */
+.kc-bar:focus { outline: 3px solid rgba(43,97,186,0.12); outline-offset: 6px; }
+
+/* color accents for the stripe remain the same (example values) */
+.kc-recon    .kc-bar-left { background: linear-gradient(180deg,#2B61BA,#1f4f96); } 
+.kc-weaponize .kc-bar-left { background: linear-gradient(180deg,#c62828,#a21f1f); }
+.kc-delivery .kc-bar-left { background: linear-gradient(180deg,#8e24aa,#6e198f); }
+.kc-exploitation .kc-bar-left { background: linear-gradient(180deg,#d84315,#b33810); }
+.kc-install  .kc-bar-left { background: linear-gradient(180deg,#6d4c41,#563b34); }
+.kc-c2       .kc-bar-left { background: linear-gradient(180deg,#00897b,#006a59); }
+.kc-persistence .kc-bar-left { background: linear-gradient(180deg,#ffb300,#cc8a00); }
+.kc-privesc  .kc-bar-left { background: linear-gradient(180deg,#ef6c00,#c45600); }
+.kc-lateral  .kc-bar-left { background: linear-gradient(180deg,#7b1fa2,#5b0f86); }
+.kc-exfil    .kc-bar-left { background: linear-gradient(180deg,#c2185b,#941243); }
+.kc-actions  .kc-bar-left { background: linear-gradient(180deg,#37474f,#22292f); }
+
+/* responsive tweak: smaller padding on small screens */
+@media (max-width: 700px) {
+  .kc-bar { min-height: 70px; }
+  .kc-bar-content { padding: 12px 14px; }
+  .kc-bar-content h3 { font-size: 1.02rem; }
+  .killchain-list { max-width: 100%; }
+}
+
+
 
