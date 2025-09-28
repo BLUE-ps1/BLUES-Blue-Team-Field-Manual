@@ -27,14 +27,20 @@
 .tile.blue { border-left: 6px solid #42a5f5; }
 .tile.red  { border-left: 6px solid #ef5350; }
 
-/* Top banner background */
-.md-header {
-  background-color: #3FACD4 !important;   /* replace with your hex */
+/* Brand colors (light mode) */
+:root {
+  /* primary = top bars, active links */
+  --md-primary-fg-color: #3FACD4;           /* your hex */
+  --md-primary-fg-color--light: #74D0E6;    /* optional */
+  --md-primary-fg-color--dark:  #2A8AA8;    /* optional */
+
+  /* accent = buttons/links hover etc. (optional) */
+  --md-accent-fg-color: #ef5350;
 }
 
-/* Optional: change the text/icons in the header */
-.md-header__title, 
-.md-header__button,
-.md-search__input {
-  color: #fffff !important;
+/* Brand colors (dark mode) */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #3FACD4;           /* same or darker shade */
+  --md-accent-fg-color: #ef5350;
 }
+
