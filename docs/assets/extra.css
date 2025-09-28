@@ -239,20 +239,36 @@
 .kc-bar:hover,.kc-bar:focus{transform:translateY(-6px);box-shadow:0 22px 50px rgba(15,15,15,.08);border-color:rgba(43,97,186,.12)}
 @media (max-width:700px){.kc-bar{min-height:70px}.kc-bar-content{padding:12px 14px}.kc-bar-content h3{font-size:1.02rem}}
 
-/* --- COLOUR STRIPES (force with !important) --- */
-.kc-recon .kc-bar-left{background:linear-gradient(180deg,#2B61BA,#1f4f96) !important}
-.kc-weaponize .kc-bar-left{background:linear-gradient(180deg,#c62828,#a21f1f) !important}
-.kc-delivery .kc-bar-left{background:linear-gradient(180deg,#8e24aa,#6e198f) !important}
-.kc-exploitation .kc-bar-left{background:linear-gradient(180deg,#d84315,#b33810) !important}
-.kc-install .kc-bar-left{background:linear-gradient(180deg,#6d4c41,#563b34) !important}
-.kc-c2 .kc-bar-left{background:linear-gradient(180deg,#00897b,#006a59) !important}
-.kc-persistence .kc-bar-left{background:linear-gradient(180deg,#ffb300,#cc8a00) !important}
-.kc-privesc .kc-bar-left{background:linear-gradient(180deg,#ef6c00,#c45600) !important}
-.kc-lateral .kc-bar-left{background:linear-gradient(180deg,#7b1fa2,#5b0f86) !important}
-.kc-exfil .kc-bar-left{background:linear-gradient(180deg,#c2185b,#941243) !important}
-.kc-actions .kc-bar-left{background:linear-gradient(180deg,#37474f,#22292f) !important}
+/* Base button look */
+.kc-bar {
+  display: block;
+  padding: 1.2rem;
+  margin: 0.8rem 0;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff !important;      /* force white text */
+  font-weight: bold;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
 
-/* sanity test: if stripes still don't show, uncomment next line to force a global red stripe */
-/* .kc-bar-left{ background:red !important } */
+/* Hover effect */
+.kc-bar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* Per-stage full background colours */
+.kc-recon        { background-color: #2B61BA !important; }
+.kc-weaponize    { background-color: #c62828 !important; }
+.kc-delivery     { background-color: #8e24aa !important; }
+.kc-exploitation { background-color: #d84315 !important; }
+.kc-install      { background-color: #6d4c41 !important; }
+.kc-c2           { background-color: #00897b !important; }
+.kc-persistence  { background-color: #ffb300 !important; }
+.kc-privesc      { background-color: #ef6c00 !important; }
+.kc-lateral      { background-color: #7b1fa2 !important; }
+.kc-exfil        { background-color: #c2185b !important; }
+.kc-actions      { background-color: #37474f !important; }
+
 
 
