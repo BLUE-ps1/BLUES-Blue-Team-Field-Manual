@@ -27,20 +27,22 @@
 .tile.blue { border-left: 6px solid #42a5f5; }
 .tile.red  { border-left: 6px solid #ef5350; }
 
-/* Brand colors (light mode) */
+/* Light mode */
 :root {
-  /* primary = top bars, active links */
   --md-primary-fg-color: #2B61BA;           /* your hex */
-  --md-primary-fg-color--light: #74D0E6;    /* optional */
-  --md-primary-fg-color--dark:  #2A8AA8;    /* optional */
-
-  /* accent = buttons/links hover etc. (optional) */
-  --md-accent-fg-color: #ef5350;
+  --md-primary-fg-color--light: #74D0E6;
+  --md-primary-fg-color--dark:  #2A8AA8;
+  --md-accent-fg-color: #ef5350;            /* optional */
 }
 
-/* Brand colors (dark mode) */
+/* Dark mode */
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #2B61BA;           /* same or darker shade */
+  --md-primary-fg-color: #2B61BA;
   --md-accent-fg-color: #ef5350;
 }
+
+/* TEST */
+.md-content { outline: 2px dashed #f00; }
+
+
 
