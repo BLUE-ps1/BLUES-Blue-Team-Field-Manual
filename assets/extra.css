@@ -255,18 +255,54 @@
   box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 }
 
-/* Per-stage full background colours */
-.kc-recon        { background-color: #2B61BA !important; }
-.kc-weaponize    { background-color: #c62828 !important; }
-.kc-delivery     { background-color: #8e24aa !important; }
-.kc-exploitation { background-color: #d84315 !important; }
-.kc-install      { background-color: #6d4c41 !important; }
-.kc-c2           { background-color: #00897b !important; }
-.kc-persistence  { background-color: #ffb300 !important; }
-.kc-privesc      { background-color: #ef6c00 !important; }
-.kc-lateral      { background-color: #7b1fa2 !important; }
-.kc-exfil        { background-color: #c2185b !important; }
-.kc-actions      { background-color: #37474f !important; }
+/* === FINAL OVERRIDE: compact full-width kill-chain buttons === */
+.killchain-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;             /* smaller gaps */
+  margin: .4rem 0 1rem !important;
+  max-width: 980px !important;
+}
+
+.kc-bar {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: .45rem .9rem !important;  /* smaller padding */
+  margin: .2rem 0 !important;        /* tighter vertical spacing */
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,.12) !important;
+  border: none !important;
+  background: #2B61BA !important;    /* default (overridden per stage below) */
+  min-height: auto !important;       /* kill tall default */
+}
+
+/* hide the old stripe element now that the whole bar is colored */
+.kc-bar-left { display: none !important; }
+
+/* text sizes (smaller) */
+.kc-bar-content h3 { margin: 0 0 .2rem 0 !important; font-size: 1rem !important; }
+.kc-bar-content p  { margin: 0 !important; font-size: .85rem !important; opacity: .95 !important; }
+
+/* subtle hover */
+.kc-bar:hover { transform: translateY(-2px) !important; box-shadow: 0 8px 20px rgba(0,0,0,.18) !important; }
+
+/* per-stage full backgrounds */
+.kc-recon        { background: #2B61BA !important; }
+.kc-weaponize    { background: #c62828 !important; }
+.kc-delivery     { background: #8e24aa !important; }
+.kc-exploitation { background: #d84315 !important; }
+.kc-install      { background: #6d4c41 !important; }
+.kc-c2           { background: #00897b !important; }
+.kc-persistence  { background: #ffb300 !important; color:#222 !important; } /* yellow → dark text for contrast */
+.kc-privesc      { background: #ef6c00 !important; }
+.kc-lateral      { background: #7b1fa2 !important; }
+.kc-exfil        { background: #c2185b !important; }
+.kc-actions      { background: #37474f !important; }
+
 
 
 
