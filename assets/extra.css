@@ -44,5 +44,15 @@
 /* TEST */
 .md-content { outline: 2px dashed #f00; }
 
+.md-header { background-color: #2B61BA !important; }
+.md-tabs   { background-color: #2B61BA !important; }
+
+/* make text readable on the bar */
+.md-header__title,
+.md-header__button,
+.md-tabs__link,
+.md-tabs__item--active .md-tabs__link {
+  color: #ffffff !important;
+}
 
 
