@@ -727,9 +727,10 @@
 <h2 id="suspicious-powershell">Suspicious PowerShell</h2>
 <p>Search for encoded or suspicious PowerShell invocations.
 Example Splunk query (Sysmon):</p>
-<pre><code>index=main sourcetype=&quot;XmlWinEventLog:Microsoft-Windows-Sysmon/Operational&quot; EventCode=1 Image=&quot;*\powershell.exe&quot;
-| search CommandLine=&quot;*-enc*&quot; OR CommandLine=&quot;*-nop*&quot;
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="nx">index</span><span class="p">=</span><span class="nx">main</span><span class="w"> </span><span class="nx">sourcetype</span><span class="p">=</span><span class="s">&quot;XmlWinEventLog:Microsoft-Windows-Sysmon/Operational&quot;</span><span class="w"> </span><span class="nx">EventCode</span><span class="p">=</span><span class="mi">1</span><span class="w"> </span><span class="nx">Image</span><span class="p">=</span><span class="s">&quot;*\powershell.exe&quot;</span>
+<span class="o">|</span><span class="w"> </span><span class="nx">search</span><span class="w"> </span><span class="nx">CommandLine</span><span class="p">=</span><span class="s">&quot;*-enc*&quot;</span><span class="w"> </span><span class="nx">OR</span><span class="w"> </span><span class="nx">CommandLine</span><span class="p">=</span><span class="s">&quot;*-nop*&quot;</span>
+</code></pre></div>
+
 <h2 id="new-scheduled-tasks">New Scheduled Tasks</h2>
 <p>Watch for schtasks.exe process creates in Sysmon.</p>
 
