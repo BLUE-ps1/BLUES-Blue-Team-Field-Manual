@@ -29,10 +29,19 @@ nav:
   - Home: index.md
   - Red Team:
       - Overview: red-team/index.md
-      - Rooms: red-team/rooms/
+      - Reconnaissance: red-team/reconnaissance/index.md
+      - Weaponization: red-team/weaponization/index.md
+      - Delivery: red-team/delivery/index.md
+      - Exploitation: red-team/exploitation/index.md
+      - Installation: red-team/installation/index.md
+      - Command & Control: red-team/c2/index.md
+      - Persistence: red-team/persistence/index.md
+      - Privilege Escalation: red-team/priv-esc/index.md
+      - Lateral Movement: red-team/lateral-movement/index.md
+      - Exfiltration: red-team/exfiltration/index.md
+      - Actions on Objectives: red-team/actions/index.md
       - Cheatsheet: red-team/cheatsheet.md
-      - Tools:
-          - Nmap: tools/nmap.md
+      
   - Blue Team:
       - Overview: blue-team/index.md
       - Detection Playbooks: blue-team/detection-playbooks.md
