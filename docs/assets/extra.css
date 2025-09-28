@@ -26,3 +26,15 @@
 /* subtle color accents */
 .tile.blue { border-left: 6px solid #42a5f5; }
 .tile.red  { border-left: 6px solid #ef5350; }
+
+/* Top banner background */
+.md-header {
+  background-color: #1a1a2e !important;   /* replace with your hex */
+}
+
+/* Optional: change the text/icons in the header */
+.md-header__title, 
+.md-header__button,
+.md-search__input {
+  color: #ffffff !important;
+}
