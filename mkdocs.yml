@@ -19,6 +19,11 @@ theme:
         name: Switch to light mode
 extra_css:
   - assets/extra.css
+markdown_extensions:
+  - admonition
+  - codehilite
+  - attr_list
+
 
 nav:
   - Home: index.md
@@ -31,3 +36,4 @@ nav:
   - Blue Team:
       - Overview: blue-team/index.md
       - Detection Playbooks: blue-team/detection-playbooks.md
+
