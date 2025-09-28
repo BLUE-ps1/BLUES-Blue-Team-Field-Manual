@@ -41,8 +41,6 @@
   --md-accent-fg-color: #ef5350;
 }
 
-/* TEST */
-.md-content { outline: 2px dashed #f00; }
 
 .md-header { background-color: #2B61BA !important; }
 .md-tabs   { background-color: #2B61BA !important; }
@@ -243,7 +241,7 @@
 .kc-bar {
   display: block;
   padding: 1.2rem;
-  margin: 0.8rem 0;
+  margin: 0.3rem 0;
   border-radius: 10px;
   text-decoration: none;
   color: #fff !important;      /* force white text */
